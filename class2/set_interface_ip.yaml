@@ -1,0 +1,12 @@
+---
+- name: Set interface
+  hosts: amsterdam-spine2
+  tasks:
+    - name: Configure Interface 
+      ios_config:
+        parents: 'interface {{ intf_uplink_to_amsterdam_leaf1_intf }}'
+        lines:
+          - description Amsterdam-Spine2 - to - Amsterdam-Leaf1
+          - 'ip address {{ intf_uplink_to_amsterdam_leaf1_ip }} {{ intf_uplink_to_amsterdam_leaf1_subnet }}'
+          - no shutdown 
+        
