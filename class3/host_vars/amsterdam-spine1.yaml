@@ -1,0 +1,4 @@
+---
+intf_loopback_intf: loopback1009
+intf_loopback_ip: 192.168.14.9
+intf_loopback_subnet: 255.255.255.255

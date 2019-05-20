@@ -1,0 +1,8 @@
+---
+snmp_community: MarkRaats   
+snmp_host_ip: 192.168.99.9
+snmp_source_intf: loopback0
+snmp_host_ips:
+  - 192.168.99.1
+  - 172.16.80.254
+  - 145.47.18.5
