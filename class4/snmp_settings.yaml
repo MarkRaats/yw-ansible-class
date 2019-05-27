@@ -1,0 +1,8 @@
+---
+- name: Conf SNMP
+  hosts: [amsterdam]
+  gather_facts: no
+  tasks:
+    - name: Configure SNMP
+      ios_config:
+        lines: "{{ lookup('file','./files/snmp_conf.txt') }}"

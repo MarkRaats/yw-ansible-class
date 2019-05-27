@@ -1,0 +1,26 @@
+!
+ip default-gateway {{ default_gateway }}
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+!
+!
+control-plane
+!
+line con 0
+ exec-timeout 30 0
+ logging synchronous
+line aux 0
+line vty 0 4
+exec-timeout 30 0
+ transport input {{ vty_transport_type }}
+!
+no scheduler allocate
+!
+End

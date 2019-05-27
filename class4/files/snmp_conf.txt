@@ -1,0 +1,3 @@
+snmp-server community MarkRaats RW
+snmp-server trap-source loopback0
+snmp-server host 192.168.99.9 MarkRaats

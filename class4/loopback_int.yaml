@@ -1,0 +1,10 @@
+---
+- name: Conf loopback int
+  hosts: amsterdam-spine1
+  gather_facts: no
+  tasks:
+    - name: Configure Interface
+      ios_config:
+        parents: 'interface {{ intf_loopback_intf }}'
+        lines:
+          - 'ip address {{ intf_loopback_ip }} {{ intf_loopback_subnet }}'

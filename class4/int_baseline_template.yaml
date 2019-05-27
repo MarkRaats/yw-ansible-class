@@ -1,0 +1,11 @@
+---
+- name: Conf baseline template
+  hosts: amsterdam-leaf1
+  gather_facts: no
+  tasks:
+    - name: Configure baseline
+      ios_config:
+        lines: "{{ lookup('template','./templates/cisco_ios_before_interfaces.j2') }}" 
+    - name: Config baseline
+      ios_config:
+        lines: "{{ lookup('template','./templates/cisco_ios_after_interfaces.j2') }}"
